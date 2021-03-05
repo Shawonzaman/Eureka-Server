@@ -1,0 +1,19 @@
+server:
+  port: 8761
+
+eureka:
+  client:
+    registryFetchIntervalSeconds: 5
+    registerWithEureka: false
+    fetch-registry: false
+  instance:
+    leaseRenewalIntervalInSeconds: 10
+
+management:
+  security:
+    enabled: false
+
+spring:
+#A different context path for admin server has been provided not conflicting with eureka
+  application:
+    name: Eureka-Server
